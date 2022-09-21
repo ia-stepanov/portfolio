@@ -1,0 +1,49 @@
+.title {
+  font-weight: bold;
+  font-size: 36px;
+  &_fz14 {
+    font-size: 14px;
+  }
+  &_fz16 {
+    font-size: 16px;
+  }
+  &_fz40 {
+    font-size: 40px;
+    font-weight: normal;
+    text-align: center;
+  }
+  &_fz56 {
+    font-size: 56px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+}
+@media (max-width: 768px) {
+  .title {
+    &_fz56 {
+      font-size: 48px;
+    }
+    &_fz40 {
+      font-size: 32px;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .title {
+    &_fz56 {
+      font-size: 40px;
+    }
+    &_fz40 {
+      font-size: 24px;
+    }
+  }
+}
+@media (max-width: 425px) {
+  .title {
+    &_fz56 {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+}
