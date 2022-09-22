@@ -135,15 +135,15 @@
 
             <nav>
               <ul class="menu__list">
-                <li class="menu__link"><a href="#">ПРО МЕНЯ</a></li>
+                <li class="menu__link"><a href="#about" scrollTo="about">ПРО МЕНЯ</a></li>
                 <li class="menu__link"><a href="#">МОЙ ОПЫТ</a></li>
                 <li class="menu__link"><a href="#">МОИ НАВЫКИ</a></li>
                 <li class="menu__link"><a href="#">МОИ РАБОТЫ</a></li>
                 <li class="menu__link">
-                  <a href="document/my_cv.pdf" download>РЕЗЮМЕ</a>
+                  <a href="./document/my_cv.pdf" download>РЕЗЮМЕ</a>
                 </li>
                 <li class="menu__link">
-                  <a href="document/my_presn.pdf" download>ПРЕЗЕНТАЦИЯ</a>
+                  <a href="./document/my_presn.pdf" download>ПРЕЗЕНТАЦИЯ</a>
                 </li>
                 <li class="menu__link"><a href="#">КОНТАКТЫ</a></li>
               </ul>
@@ -181,9 +181,9 @@
 
     <section id="promo" class="promo">
       <div class="promo__content">
-        <h1 class="title title_fz56">Игорь Степанов</h1>
+        <h1 class="promo__title">Игорь Степанов</h1>
         <div
-          class="title title_fz40 animate-typing"
+          class="promo__subtitle animate-typing"
           data-animate-loop="true"
           data-type-speed="100"
           data-type-delay="200"
@@ -236,6 +236,88 @@
 
       <div class="promo__mouse">
         <div class="promo__mouse-scroll"></div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about__wrapper">
+          <div class="about__descr">
+            <h2 class="title title_fz18 about__title">Про меня</h2>
+            <div class="title title_fz36 about__subtitle">Меня зовут Игорь</div>
+            <div class="divider"></div>
+            <p class="about__text">
+              14&nbsp;лет работал в&nbsp;графическом дизайне, мне нравилось решать сложные
+              задачи: разрабатывать проекты с&nbsp;дополнительной реальностью (AR) или
+              новые технологии для вырезки на&nbsp;хромакее.
+            </p>
+            <p class="about__text">
+              В&nbsp;тот момент понял, что для полноценной разработки нужны знания языков
+              программирования и&nbsp;решил, что пора перейти в&nbsp;IT
+              сферу,&nbsp;&mdash; меня захватывает процесс разработки и&nbsp;возможность
+              создавать удобные и&nbsp;полезные продукты.
+            </p>
+            <p class="about__text">
+              Также слежу за&nbsp;последними новостями в&nbsp;области искусственного
+              интеллекта, особенно в&nbsp;сфере фото и&nbsp;кино.
+            </p>
+          </div>
+
+          <div class="about__skills">
+            <div class="about__skills-item">
+              <div class="about__skills-header">
+                <div class="about__skills-circle">
+                  <img src="icons/about_me/web_development.svg" alt="web-dev" />
+                </div>
+                <div class="about__skills-head">
+                  <div class="title title_fz16">Frontend разработка</div>
+                  <div class="about__skills-descr">Умею:</div>
+                </div>
+              </div>
+              <div class="about__skills-text">
+                <ul>
+                  <li>
+                    Писать код на&nbsp;HTML, CSS и&nbsp;JavaScript в&nbsp;парадигме ООП;
+                  </li>
+                  <li>Создавать адаптивные интерфейсы для&nbsp;разных устройств;</li>
+                  <li>
+                    Разрабатывать сайты и&nbsp;веб-приложения на&nbsp;jQuery, React, Vue;
+                  </li>
+                  <li>Взаимодействовать с&nbsp;базами данных NoSQL, MongoDB.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="about__skills-item">
+              <div class="about__skills-header">
+                <div class="about__skills-circle">
+                  <img src="icons/about_me/design.svg" alt="design-dev" />
+                </div>
+                <div class="about__skills-head">
+                  <div class="title title_fz16">Графический дизайн</div>
+                  <div class="about__skills-descr">Умею:</div>
+                </div>
+              </div>
+              <div class="about__skills-text">
+                <ul>
+                  <li>Составлять портрет целевой аудитории;</li>
+                  <li>
+                    Находить метафоры и&nbsp;создавать дизайн для разных целей:
+                    от&nbsp;иконок до мерча;
+                  </li>
+                  <li>
+                    Работать с&nbsp;композицией, текстом, подбирать цветовую палитру;
+                  </li>
+                  <li>Верстать презентации, макеты, лендинги.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="about__photo">
+            <img src="img/main_photo.jpg" alt="photo" />
+          </div>
+        </div>
       </div>
     </section>
 
