@@ -1,0 +1,131 @@
+.resume {
+  padding-top: 120px;
+  &__title {
+    position: relative;
+    text-align: center;
+    @include before_circle;
+    &:before {
+      top: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &__subtitle {
+    text-align: center;
+  }
+  &__wrapper {
+    padding: 60px 80px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 425px);
+    column-gap: 135px;
+    justify-content: center;
+  }
+  &__column {
+    &-title {
+      position: relative;
+      padding-left: 35px;
+      &::before {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        // background: $main-subcolor;
+        background-image: $linear-gradient;
+        border-radius: 100%;
+        left: -7px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    ul {
+      list-style-type: none;
+      li {
+        position: relative;
+        &:after {
+          content: '';
+          width: 2px;
+          height: calc(100% + 16px);
+          position: absolute;
+          top: -16px;
+          left: 0;
+          background-color: #2b2b2b;
+        }
+      }
+    }
+  }
+  &__item {
+    position: relative;
+    &:before {
+      content: '';
+      height: 2px;
+      width: 45px;
+      position: absolute;
+      top: 66px;
+      background-color: #2b2b2b;
+    }
+    &-head {
+      position: relative;
+      padding: 45px 0 0 100px;
+      h4 {
+        margin-bottom: 0;
+      }
+    }
+    &-icon {
+      position: absolute;
+      top: 48px;
+      left: 40px;
+      @include before_circle;
+      z-index: 1;
+      img {
+        position: absolute;
+        left: 17px;
+        top: 14px;
+      }
+    }
+    &-location {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+    &-body {
+      padding-left: 43px;
+      margin-top: 12px;
+      font-size: 14px;
+      a {
+        font-size: 13px;
+        color: $main-color;
+        font-weight: bold;
+        text-decoration: none;
+        transition: opacity 0.2s ease;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+      span {
+        display: block;
+        margin-top: 16px;
+        font-weight: 600;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+    &-list {
+      margin-left: 14px;
+      p {
+        margin: 8px 0;
+        &:before {
+          content: '\2022';
+          margin-right: 8px;
+          margin-left: -14px;
+          color: #2b2b2b;
+          font-size: 16px;
+          font-weight: 700;
+        }
+      }
+      a {
+        display: block;
+        margin-top: 12px;
+      }
+    }
+  }
+}
