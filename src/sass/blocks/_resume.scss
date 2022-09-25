@@ -60,19 +60,19 @@
       height: 2px;
       width: 45px;
       position: absolute;
-      top: 66px;
+      top: 61px;
       background-color: #2b2b2b;
     }
     &-head {
       position: relative;
-      padding: 45px 0 0 100px;
+      padding: 40px 0 0 100px;
       h4 {
         margin-bottom: 0;
       }
     }
     &-icon {
       position: absolute;
-      top: 48px;
+      top: 43px;
       left: 40px;
       @include before_circle;
       z-index: 1;
@@ -108,11 +108,13 @@
           margin-top: 0;
         }
       }
+      p {
+        margin: 8px 0 0;
+      }
     }
     &-list {
       margin-left: 14px;
       p {
-        margin: 8px 0;
         &:before {
           content: '\2022';
           margin-right: 8px;

@@ -1,5 +1,6 @@
-@import 'libs/bootstrap-reboot.min';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+@import 'libs/bootstrap-reboot.min';
+@import 'libs/animate';
 
 @import 'base/animations';
 @import 'base/variables';
@@ -31,3 +32,4 @@
 @import 'blocks/button';
 @import 'blocks/about';
 @import 'blocks/resume';
+@import 'blocks/skills';
