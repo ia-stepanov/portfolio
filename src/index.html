@@ -135,10 +135,10 @@
 
             <nav>
               <ul class="menu__list">
-                <li class="menu__link"><a href="#about" scrollTo="about">ПРО МЕНЯ</a></li>
-                <li class="menu__link"><a href="#resume">МОЙ ОПЫТ</a></li>
-                <li class="menu__link"><a href="#skills">МОИ НАВЫКИ</a></li>
-                <li class="menu__link"><a href="#">МОИ РАБОТЫ</a></li>
+                <li class="menu__link"><a href="#about data-link">ПРО МЕНЯ</a></li>
+                <li class="menu__link"><a href="#resume data-link">МОЙ ОПЫТ</a></li>
+                <li class="menu__link"><a href="#skills data-link">МОИ НАВЫКИ</a></li>
+                <li class="menu__link"><a href="#portfolio data-link">МОИ РАБОТЫ</a></li>
                 <li class="menu__link">
                   <a href="./document/my_cv.pdf" download>РЕЗЮМЕ</a>
                 </li>
@@ -194,8 +194,8 @@
         </div>
 
         <div class="promo__btns">
-          <a href="#projects" class="promo__link btn">Портфолио</a>
-          <a href="#about" class="promo__link">Про меня</a>
+          <a href="#portfolio" class="promo__link btn" data-link>Портфолио</a>
+          <a href="#about" class="promo__link" data-link>Про меня</a>
         </div>
       </div>
 
@@ -771,6 +771,26 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <h2 class="title title_fz16 title__section-title">Портфолио</h2>
+        <div class="title title_fz36 title__section-subtitle">Мои работы</div>
+        <div class="divider"></div>
+
+        <div class="portfolio__container">
+          <ul class="portfolio__nav">
+            <li class="portfolio__item portfolio__item_active">Все проекты</li>
+            <li class="portfolio__item">Frontend разработка</li>
+            <li class="portfolio__item">Графический дизайн</li>
+          </ul>
+
+          <div class="portfolio__wrapper all portfolio__wrapper_active"></div>
+          <div class="portfolio__wrapper web"></div>
+          <div class="portfolio__wrapper design"></div>
         </div>
       </div>
     </section>
