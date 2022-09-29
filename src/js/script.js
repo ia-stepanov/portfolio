@@ -105,3 +105,12 @@ $('form').submit(function (e) {
   handleSubmitBtn();
   return false;
 });
+
+// Pageup
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 1600) {
+    $('.pageup').fadeIn();
+  } else {
+    $('.pageup').fadeOut();
+  }
+});
