@@ -10,11 +10,12 @@ import './modules/Portfolio.js';
 import './plugins/jquery.animateTyping.js';
 import './plugins/jquery.simpleLoadMore.min.js';
 import './plugins/jquery.anchorScroll.js';
+import './plugins/jquery.showMore.js';
 
 // AnchorScroll
 var anchorScroll = $(document).AnchorScroll({
-  // target: 'a[href^="#"]',
   target: 'a[data-link]',
+  // target: 'a[href^="#"]',
   // speed: 1000,
   // offset: 20,
   // easing:"linear"
@@ -27,4 +28,15 @@ $('.portfolio__wrapper.all').simpleLoadMore({
   itemsToLoad: window.innerWidth >= 600 ? 8 : 4,
   btnHTML:
     '<a href="#portfolio" class="portfolio__content-link btn" data-link>Еще проекты</a>',
+});
+
+
+// ShowMore.js
+$(document).ready(function () {
+  $('#test-last').showMore({
+    minheight: 1024,
+    buttontxtmore: '&#8595;',
+    buttontxtless: '&#8593;',
+    animationspeed: 750,
+  });
 });
