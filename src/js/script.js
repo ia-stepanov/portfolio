@@ -11,14 +11,11 @@ import './plugins/jquery.animateTyping.js';
 import './plugins/jquery.simpleLoadMore.min.js';
 import './plugins/jquery.anchorScroll.js';
 import './plugins/jquery.showMore.js';
+import './plugins/jquery.validate.min.js';
 
 // AnchorScroll
 var anchorScroll = $(document).AnchorScroll({
   target: 'a[data-link]',
-  // target: 'a[href^="#"]',
-  // speed: 1000,
-  // offset: 20,
-  // easing:"linear"
 });
 
 // Simple Load More
@@ -26,10 +23,8 @@ $('.portfolio__wrapper.all').simpleLoadMore({
   item: '.portfolio__content',
   count: 8,
   itemsToLoad: window.innerWidth >= 600 ? 8 : 4,
-  btnHTML:
-    '<a href="#portfolio" class="portfolio__content-link btn" data-link>Еще проекты</a>',
+  btnHTML: '<a href="#" class="portfolio__content-link btn">Еще проекты</a>',
 });
-
 
 // ShowMore.js
 $(document).ready(function () {
@@ -39,4 +34,28 @@ $(document).ready(function () {
     buttontxtless: '&#8593;',
     animationspeed: 750,
   });
+});
+
+// Validation Plugin
+$('.contacts-form').validate({
+  rules: {
+    name: {
+      required: true,
+      minlength: 2,
+    },
+    email: {
+      required: true,
+      email: true,
+    },
+  },
+  messages: {
+    name: {
+      required: 'Пожалуйста, введите ваше имя',
+      minlength: jQuery.validator.format('Введите не менее {0} символов!'),
+    },
+    email: {
+      required: 'Пожалуйста, введите вашу почту',
+      email: 'Неправильно введен адрес почты',
+    },
+  },
 });

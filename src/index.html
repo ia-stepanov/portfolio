@@ -145,32 +145,29 @@
                 <li class="menu__link">
                   <a href="./document/my_presn.pdf" download>ПРЕЗЕНТАЦИЯ</a>
                 </li>
-                <li class="menu__link"><a href="#" data-link>КОНТАКТЫ</a></li>
+                <li class="menu__link"><a href="#contacts" data-link>КОНТАКТЫ</a></li>
               </ul>
             </nav>
 
             <div class="menu__social">
               <a href="https://github.com/ia-stepanov" target="_blank">
-                <img src="./icons/social/github.svg" alt="icon" />
+                <img src="./icons/social/github.svg" alt="icon" title="GitHub" />
               </a>
 
               <a href="https://www.behance.net/ia-stepanov" target="_blank">
-                <img src="./icons/social/behance.svg" alt="icon" />
+                <img src="./icons/social/behance.svg" alt="icon" title="Behance" />
               </a>
 
               <a href="https://www.linkedin.com/in/ia-stepanov/" target="_blank">
-                <img src="./icons/social/linkedin.svg" alt="icon" />
+                <img src="./icons/social/linkedin.svg" alt="icon" title="LinkedIn" />
               </a>
 
               <a href="https://t.me/ia_stepanov" target="_blank">
-                <img src="./icons/social/telegram.svg" alt="icon" />
+                <img src="./icons/social/telegram.svg" alt="icon" title="Telegram" />
               </a>
 
-              <a
-                href="https://hh.ru/resume/29dc3522ff09962ad10039ed1f534956493677"
-                target="_blank"
-              >
-                <img src="./icons/social/hh.svg" alt="icon" />
+              <a href="./document/my_cv.pdf" download>
+                <img src="icons/social/cv.svg" alt="icon" title="Резюме" />
               </a>
             </div>
           </div>
@@ -202,34 +199,31 @@
       <ul class="promo__socials">
         <li class="promo__social-link">
           <a href="https://github.com/ia-stepanov" target="_blank">
-            <img src="./icons/social/github.svg" alt="icon" />
+            <img src="./icons/social/github.svg" alt="icon" title="GitHub" />
           </a>
         </li>
 
         <li class="promo__social-link">
           <a href="https://www.behance.net/ia-stepanov" target="_blank">
-            <img src="./icons/social/behance.svg" alt="icon" />
+            <img src="./icons/social/behance.svg" alt="icon" title="Behance" />
           </a>
         </li>
 
         <li class="promo__social-link">
           <a href="https://www.linkedin.com/in/ia-stepanov/" target="_blank">
-            <img src="./icons/social/linkedin.svg" alt="icon" />
+            <img src="./icons/social/linkedin.svg" alt="icon" title="LinkedIn" />
           </a>
         </li>
 
         <li class="promo__social-link">
           <a href="https://t.me/ia_stepanov" target="_blank">
-            <img src="./icons/social/telegram.svg" alt="icon" />
+            <img src="./icons/social/telegram.svg" alt="icon" title="Telegram" />
           </a>
         </li>
 
         <li class="promo__social-link">
-          <a
-            href="https://hh.ru/resume/29dc3522ff09962ad10039ed1f534956493677"
-            target="_blank"
-          >
-            <img src="./icons/social/hh.svg" alt="icon" />
+          <a href="./document/my_cv.pdf" download>
+            <img src="icons/social/cv.svg" alt="icon" title="Резюме" />
           </a>
         </li>
       </ul>
@@ -794,7 +788,84 @@
         </div>
       </div>
     </section>
-    
+
+    <section id="contacts" class="contacts">
+      <div class="container">
+        <div class="contacts__wrapper">
+          <div class="contacts__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.6192859558305!2d37.60377749720324!3d55.76511549297935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a473ae3d27b%3A0x1ac16a6e2f009be7!2z0KLQstC10YDRgdC60LDRjw!5e0!3m2!1sru!2sru!4v1664451128731!5m2!1sru!2sru"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="contacts__descr">
+            <h2 class="title title_fz16 contacts__title">Контакты</h2>
+            <div class="title title_fz36 contacts__subtitle">Свяжитесь со&nbsp;мной</div>
+            <div class="divider"></div>
+
+            <div class="title title_fz16 contacts__text">
+              Любым удобным для вас способом:
+            </div>
+            <div class="contacts__social">
+              <a
+                href="https://github.com/ia-stepanov"
+                target="_blank"
+                class="contacts__link"
+              >
+                <img src="icons/social/github.svg" alt="github" title="GitHub" />
+              </a>
+
+              <a
+                href="https://www.behance.net/ia-stepanov"
+                target="_blank"
+                class="contacts__link"
+              >
+                <img src="icons/social/behance.svg" alt="behance" title="Behance" />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/ia-stepanov/"
+                target="_blank"
+                class="contacts__link"
+              >
+                <img src="icons/social/linkedin.svg" alt="linkedin" title="LinkedIn" />
+              </a>
+
+              <a href="https://t.me/ia_stepanov" target="_blank" class="contacts__link">
+                <img src="icons/social/telegram.svg" alt="telegram" title="Telegram" />
+              </a>
+
+              <a href="./document/my_cv.pdf" download class="contacts__link">
+                <img src="icons/social/cv.svg" alt="cv" title="Резюме" />
+              </a>
+            </div>
+            <div class="title title_fz16 contacts__text">
+              Или оставьте ваши данные и&nbsp;я&nbsp;сам вам напишу:
+            </div>
+
+            <form id="contacts-form" class="contacts__form" action="#">
+              <div class="contacts__input-form">
+                <input name="name" id="name" class="contacts__input" type="text" required />
+                <label for="name" class="contacts__label">Ваше имя</label>
+              </div>
+              <div class="contacts__input-form">
+                <input name="email" id="email" class="contacts__input" type="email" required />
+                <label for="email" class="contacts__label">Ваша почта</label>
+              </div>
+
+              <div class="contacts__textarea">
+                <textarea name="text" id="text"></textarea>
+                <label for="text" class="contacts__label">Ваше сообщение</label>
+              </div>
+              <div>
+                <button class="contacts__btn btn">Отправить сообщение</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <script type="module" src="js/script.js"></script>
   </body>
 </html>
