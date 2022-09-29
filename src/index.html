@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Игорь Степанов Frontend Developer</title>
+    <title>Игорь Степанов Frontend Developer | Graphic Designer</title>
     <meta name="title" content="Мое портфолио" />
     <meta
       name="description"
@@ -845,16 +845,28 @@
 
             <form id="contacts-form" class="contacts__form" action="#">
               <div class="contacts__input-form">
-                <input name="name" id="name" class="contacts__input" type="text" required />
+                <input
+                  name="name"
+                  id="name"
+                  class="contacts__input"
+                  type="text"
+                  required
+                />
                 <label for="name" class="contacts__label">Ваше имя</label>
               </div>
               <div class="contacts__input-form">
-                <input name="email" id="email" class="contacts__input" type="email" required />
+                <input
+                  name="email"
+                  id="email"
+                  class="contacts__input"
+                  type="email"
+                  required
+                />
                 <label for="email" class="contacts__label">Ваша почта</label>
               </div>
 
               <div class="contacts__textarea">
-                <textarea name="text" id="text"></textarea>
+                <textarea name="text" id="text" required></textarea>
                 <label for="text" class="contacts__label">Ваше сообщение</label>
               </div>
               <div>
@@ -865,6 +877,14 @@
         </div>
       </div>
     </section>
+
+    <div class="overlay">
+      <div class="modal" id="thanks">
+        <div class="modal__close">&times;</div>
+        <div class="modal__subtitle">Спасибо за&nbsp;ваше сообщение!</div>
+        <div class="modal__descr">Отвечу вам в&nbsp;ближайшее время!</div>
+      </div>
+    </div>
 
     <script type="module" src="js/script.js"></script>
   </body>

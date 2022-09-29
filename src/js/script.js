@@ -36,8 +36,13 @@ $(document).ready(function () {
   });
 });
 
+// Modal
+$('.modal__close').on('click', function () {
+  $('.overlay, #thanks').fadeOut('fast');
+});
+
 // Validation Plugin
-$('.contacts-form').validate({
+$('#contacts-form').validate({
   rules: {
     name: {
       required: true,
@@ -46,6 +51,10 @@ $('.contacts-form').validate({
     email: {
       required: true,
       email: true,
+    },
+    text: {
+      required: true,
+      minlength: 1,
     },
   },
   messages: {
@@ -57,5 +66,42 @@ $('.contacts-form').validate({
       required: 'Пожалуйста, введите вашу почту',
       email: 'Неправильно введен адрес почты',
     },
+    text: {
+      required: 'Пожалуйста, введите текст',
+    },
   },
+});
+
+// Validation Submit Button
+function handleSubmitBtn() {
+  $('.contacts__btn').attr('disabled', 'disabled');
+
+  $('#name,#email,#text').keyup(function (event) {
+    var name = $('#name').val();
+    var email = $('#email').val();
+    var textarea = $('#text').val();
+
+    if (name.length > 1 && email.length != 0 && textarea.length != 0) {
+      $('.contacts__btn').removeAttr('disabled');
+    } else {
+      $('.contacts__btn').attr('disabled', 'disabled');
+    }
+  });
+}
+handleSubmitBtn();
+
+// PHPMailer
+$('form').submit(function (e) {
+  e.preventDefault();
+  $.ajax({
+    type: 'POST',
+    url: 'mailer/index.php',
+    data: $(this).serialize(),
+  }).done(function () {
+    $(this).find('input').val('');
+    $('.overlay, #thanks').fadeIn('fast');
+    $('form').trigger('reset');
+  });
+  handleSubmitBtn();
+  return false;
 });

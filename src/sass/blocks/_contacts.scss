@@ -44,9 +44,9 @@
   &__form {
     margin-top: 30px;
     display: grid;
-    grid-template: 45px 190px 45px / repeat(2, 280px);
+    grid-template: 45px 190px 54px / repeat(2, 280px);
     justify-content: space-between;
-    row-gap: 32px;
+    row-gap: 40px;
   }
 
   &__input-form {
@@ -97,5 +97,10 @@
     &:hover {
       color: #fff;
     }
+    &:disabled {
+      opacity: 0.5;
+      cursor: pointer;
+    }
   }
 }
+
