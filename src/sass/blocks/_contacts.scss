@@ -1,5 +1,5 @@
 .contacts {
-  padding: 120px 0 90px 0;
+  padding: 120px 0 90px;
   &__wrapper {
     padding: 0 40px;
     display: grid;
@@ -34,7 +34,7 @@
     img {
       max-width: 30px;
       max-height: 30px;
-      filter: brightness(10%);
+      filter: $brightness;
     }
     &:hover {
       text-decoration: none;

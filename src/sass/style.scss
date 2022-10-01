@@ -10,7 +10,7 @@
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
-  color: #2b2b2b;
+  color: $main-subcolor
 }
 
 .container {
@@ -21,7 +21,7 @@
 .divider {
   width: 60px;
   height: 3px;
-  background-color: $main-subcolor;
+  background-color: #80bfff;
   margin: 25px auto 0;
 }
 
@@ -35,5 +35,6 @@
 @import 'blocks/skills';
 @import 'blocks/portfolio';
 @import 'blocks/contacts';
+@import 'blocks/footer';
 @import 'blocks/modal';
 @import 'blocks/pageup';

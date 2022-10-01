@@ -68,7 +68,7 @@
     }
     a {
       position: relative;
-      color: #2b2b2b;
+      color: $main-subcolor;
       text-decoration: none;
       transition: color 0.2s ease;
       &:hover {
@@ -98,7 +98,7 @@
       transition: opacity 0.2s ease;
       img {
         width: 20px;
-        filter: brightness(10%);
+        filter: $brightness;
       }
       &:hover {
         opacity: 0.9;

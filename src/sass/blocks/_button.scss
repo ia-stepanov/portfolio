@@ -3,12 +3,12 @@
   border-radius: 4px;
   background: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  color: #2b2b2b;
+  color: $main-subcolor;
   font-size: 16px;
   font-weight: bold;
   transition: all 0.2s ease;
   &:hover {
-    color: #2b2b2b;
+    color: $main-subcolor;
     text-decoration: none;
     transform: translateY(-2px);
   }
@@ -20,7 +20,7 @@
   width: 48px;
   height: 48px;
   margin: 0 auto;
-  border: 2px solid #2b2b2b;
+  border: 2px solid $main-subcolor;
   border-radius: 50%;
   font-size: 64px;
   line-height: 32px;
