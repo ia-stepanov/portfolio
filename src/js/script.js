@@ -5,6 +5,7 @@ import './libs/jquery-3.6.1.min.js';
 import './modules/Background.js';
 import './modules/Menu.js';
 import './modules/Portfolio.js';
+import './modules/Privacy.js';
 
 // Plugins
 import './plugins/jquery.animateTyping.js';
@@ -56,6 +57,9 @@ $('#contacts-form').validate({
       required: true,
       minlength: 1,
     },
+    checkbox: {
+      required: true,
+    },
   },
   messages: {
     name: {
@@ -69,6 +73,9 @@ $('#contacts-form').validate({
     text: {
       required: 'Пожалуйста, введите текст',
     },
+    checkbox: {
+      required: 'Подтвердите, что вы согласны с политикой конфиденциальности',
+    },
   },
 });
 
@@ -76,18 +83,25 @@ $('#contacts-form').validate({
 function handleSubmitBtn() {
   $('.contacts__btn').attr('disabled', 'disabled');
 
-  $('#name,#email,#text').keyup(function (event) {
-    var name = $('#name').val();
-    var email = $('#email').val();
-    var textarea = $('#text').val();
+  $('#name,#email,#text,#checkbox').on('keyup change', function (event) {
+    const name = $('#name').val();
+    const email = $('#email').val();
+    const textarea = $('#text').val();
+    const checkbox = $('#checkbox');
 
-    if (name.length > 1 && email.length != 0 && textarea.length != 0) {
+    if (
+      name.length > 1 &&
+      email.length != 0 &&
+      textarea.length != 0 &&
+      checkbox.is(':checked')
+    ) {
       $('.contacts__btn').removeAttr('disabled');
     } else {
       $('.contacts__btn').attr('disabled', 'disabled');
     }
   });
 }
+
 handleSubmitBtn();
 
 // PHPMailer

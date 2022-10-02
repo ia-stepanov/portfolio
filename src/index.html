@@ -869,8 +869,14 @@
                 <textarea name="text" id="text" required></textarea>
                 <label for="text" class="contacts__label">Ваше сообщение</label>
               </div>
-              <div>
+              <div class="contacts__triggers">
                 <button class="contacts__btn btn">Отправить сообщение</button>
+                <div class="contacts__policy">
+                  <input name="checkbox" id="checkbox" type="checkbox" required />
+                  <span
+                    >Я согласен(а) с <a href="#">политикой конфиденциальности</a></span
+                  >
+                </div>
               </div>
             </form>
           </div>
@@ -897,9 +903,7 @@
 
           <div class="footer__divider"></div>
 
-          <div class="footer__copyright">
-            © 2022. <span>Игорь Степанов</span>
-          </div>
+          <div class="footer__copyright">© 2022. <span>Игорь Степанов</span></div>
         </div>
       </div>
     </footer>
@@ -909,6 +913,10 @@
         <div class="modal__close">&times;</div>
         <div class="modal__subtitle">Спасибо за&nbsp;ваше сообщение!</div>
         <div class="modal__descr">Отвечу вам в&nbsp;ближайшее время!</div>
+      </div>
+
+      <div class="modal" id="privacy">
+        <div class="modal__close">&times;</div>
       </div>
     </div>
 
