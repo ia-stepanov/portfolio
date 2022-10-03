@@ -1,69 +1,71 @@
 <?php
 
-	$name = $_POST['name'];
-	$email = $_POST['email'];
-	$text = $_POST['text'];
+$name = $_POST['name'];
+$email = $_POST['email'];
+$text = $_POST['text'];
 
-//Include required PHPMailer files
-	require 'includes/PHPMailer.php';
-	require 'includes/SMTP.php';
-	require 'includes/Exception.php';
+// Include required PHPMailer files
+require 'includes/PHPMailer.php';
+require 'includes/Exception.php';
+// require 'includes/SMTP.php';
 
-//Define name spaces
-	use PHPMailer\PHPMailer\PHPMailer;
-	use PHPMailer\PHPMailer\SMTP;
-	use PHPMailer\PHPMailer\Exception;
+// Define name spaces
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+// use PHPMailer\PHPMailer\SMTP;
 
-//Create instance of PHPMailer
-	$mail = new PHPMailer();
-	$mail->CharSet = "utf-8";
+// Create instance of PHPMailer
+$mail = new PHPMailer(true);
+$mail->CharSet = "utf-8";
 
 //Set mailer to use smtp
-	$mail->isSMTP();
+// $mail->IsSMTP();
 
-//Define smtp host
-	$mail->Host = "smtp.gmail.com";
+// Define smtp host
+$mail->Host = "smtp.gmail.com";
 
-//Enable smtp authentication
-	$mail->SMTPAuth = true;
+// Enable smtp authentication
+$mail->SMTPAuth = true;
 
-//Set gmail username
-	$mail->Username = "gmaillogin@gmail.com";
+// Set gmail username
+$mail->Username = "gmaillogin@gmail.com";
 
-//Set gmail password
-	$mail->Password = "password";
+// Set gmail password
+$mail->Password = "password";
 
-//Set smtp encryption type (ssl/tls)
-	$mail->SMTPSecure = "tls";
+// Set smtp encryption type (ssl/tls)
+$mail->SMTPSecure = "tls";
 
-//Port to connect smtp
-	$mail->Port = "587";
+// Port to connect smtp
+$mail->Port = "587";
 
-//Set sender email
-	$mail->setFrom("gmaillogin@gmail.com", "Portfolio");
+// Set sender email
+$mail->setFrom("gmaillogin@gmail.com", "Portfolio");
 
-//Add recipient
-	$mail->addAddress("recipient@mail.com");
+// Add recipient
+$mail->addAddress("recipient@mail.ru");
 
-//Enable HTML
-	$mail->isHTML(true);
+// Enable HTML
+$mail->isHTML(true);
 
-//Email subject
-	$mail->Subject = "Форма обратной связи";
+// Email subject
+$mail->Subject = "Форма обратной связи";
 
-//Email body
-	$mail->Body    = '
-	Пользователь оставил данные <br> 
-	Имя: ' . $name . ' <br>
-	Почта: ' . $email . '<br>
-	Текст: ' . $text . '';
+// Email body
+$mail->Body    = '
+Пользователь оставил данные <br> 
+Имя: ' . $name . ' <br>
+Почта: ' . $email . '<br>
+Текст: ' . $text . '';
 
-//Finally send email
-	if ( $mail->send() ) {
-		echo "Email Sent..!";
-	}else{
-		echo "Message could not be sent. Mailer Error: ";
-	}
+// Finally send email
+if ( $mail->send() ) {
+	echo "Email Sent..!";
+}else{
+	echo "Message could not be sent. Mailer Error: ";
+}
 
-//Closing smtp connection
-	$mail->smtpClose();
+// Closing smtp connection
+$mail->smtpClose();
+
+?>
