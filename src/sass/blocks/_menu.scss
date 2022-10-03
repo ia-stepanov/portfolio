@@ -123,7 +123,13 @@
   }
   .menu {
     &__block {
-      width: 320px;
+      width: 250px;
+      padding: 140px 20px 40px;
+    }
+    &__link {
+      margin-bottom: 12px;
+      font-size: 20px;
+      line-height: 32px;
     }
   }
 }

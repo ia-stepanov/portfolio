@@ -30,7 +30,8 @@ $('.portfolio__wrapper.all').simpleLoadMore({
 // ShowMore.js
 $(document).ready(function () {
   $('#test-last').showMore({
-    minheight: 1024,
+    // minheight: 1024,
+    minheight: 968,
     buttontxtmore: '&#8595;',
     buttontxtless: '&#8593;',
     animationspeed: 750,

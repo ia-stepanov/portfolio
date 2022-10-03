@@ -3,11 +3,10 @@
   &__wrapper {
     padding: 0 40px;
     display: grid;
-    justify-content: center;
+    justify-content: space-evenly;
     grid-template-columns: 400px 585px;
     column-gap: 80px;
   }
-
   iframe {
     width: 400px;
     height: 600px;

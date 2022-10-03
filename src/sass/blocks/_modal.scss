@@ -42,13 +42,3 @@
     text-align: center;
   }
 }
-@media (max-width: 575px) {
-  .modal {
-    width: 90%;
-    &__close {
-      top: -40px;
-      right: 0;
-      font-size: 40px;
-    }
-  }
-}

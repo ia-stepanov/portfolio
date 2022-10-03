@@ -1,8 +1,8 @@
 .header {
-  position: fixed;
-  width: 100%;
   background: #fff;
   box-shadow: 0 10px 30px 0 rgb(138 155 165 / 15%);
+  position: fixed;
+  width: 100%;
   z-index: 999;
   &__content {
     display: flex;
@@ -15,20 +15,6 @@
     img {
       width: 100%;
       filter: $brightness;
-    }
-  }
-}
-@media (max-width: 425px) {
-  .header {
-    &__logo {
-      width: 120px;
-      img {
-        width: 100%;
-      }
-    }
-    &__content {
-      display: flex;
-      padding: 24px;
     }
   }
 }

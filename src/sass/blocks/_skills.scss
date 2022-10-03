@@ -59,11 +59,3 @@
     }
   }
 }
-@media (max-width: 600px) {
-  .skills {
-    &__items {
-      grid-template-columns: 1fr;
-      gap: 24px;
-    }
-  }
-}

@@ -14,11 +14,12 @@
     text-align: center;
   }
   &__wrapper {
-    padding: 60px 80px 0;
+    padding: 60px 40px 0;
     display: grid;
     grid-template-columns: repeat(2, 425px);
     column-gap: 135px;
-    justify-content: center;
+    // justify-content: center;
+    justify-content: space-evenly;
   }
   &__column {
     &-title {
