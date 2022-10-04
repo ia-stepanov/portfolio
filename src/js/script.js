@@ -102,7 +102,6 @@ function handleSubmitBtn() {
     }
   });
 }
-
 handleSubmitBtn();
 
 // PHPMailer
