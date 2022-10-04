@@ -5,6 +5,7 @@ import './libs/jquery-3.6.1.min.js';
 import './modules/Background.js';
 import './modules/Menu.js';
 import './modules/Portfolio.js';
+import './modules/Form.js';
 import './modules/Privacy.js';
 
 // Plugins
@@ -12,7 +13,6 @@ import './plugins/jquery.animateTyping.js';
 import './plugins/jquery.simpleLoadMore.min.js';
 import './plugins/jquery.anchorScroll.js';
 import './plugins/jquery.showMore.js';
-import './plugins/jquery.validate.min.js';
 
 // AnchorScroll
 var anchorScroll = $(document).AnchorScroll({
@@ -41,83 +41,6 @@ $(document).ready(function () {
 // Modal
 $('.modal__close').on('click', function () {
   $('.overlay, #thanks').fadeOut('fast');
-});
-
-// Validation Plugin
-$('#contacts-form').validate({
-  rules: {
-    name: {
-      required: true,
-      minlength: 2,
-    },
-    email: {
-      required: true,
-      email: true,
-    },
-    text: {
-      required: true,
-      minlength: 1,
-    },
-    checkbox: {
-      required: true,
-    },
-  },
-  messages: {
-    name: {
-      required: 'Пожалуйста, введите ваше имя',
-      minlength: jQuery.validator.format('Введите не менее {0} символов!'),
-    },
-    email: {
-      required: 'Пожалуйста, введите вашу почту',
-      email: 'Неправильно введен адрес почты',
-    },
-    text: {
-      required: 'Пожалуйста, введите текст',
-    },
-    checkbox: {
-      required: 'Подтвердите, что вы согласны с политикой конфиденциальности',
-    },
-  },
-});
-
-// Validation Submit Button
-function handleSubmitBtn() {
-  $('.contacts__btn').attr('disabled', 'disabled');
-
-  $('#name,#email,#text,#checkbox').on('keyup change', function (event) {
-    const name = $('#name').val();
-    const email = $('#email').val();
-    const textarea = $('#text').val();
-    const checkbox = $('#checkbox');
-
-    if (
-      name.length > 1 &&
-      email.length != 0 &&
-      textarea.length != 0 &&
-      checkbox.is(':checked')
-    ) {
-      $('.contacts__btn').removeAttr('disabled');
-    } else {
-      $('.contacts__btn').attr('disabled', 'disabled');
-    }
-  });
-}
-handleSubmitBtn();
-
-// PHPMailer
-$('form').submit(function (e) {
-  e.preventDefault();
-  $.ajax({
-    type: 'POST',
-    url: 'mailer/index.php',
-    data: $(this).serialize(),
-  }).done(function () {
-    $(this).find('input').val('');
-    $('.overlay, #thanks').fadeIn('fast');
-    $('form').trigger('reset');
-  });
-  handleSubmitBtn();
-  return false;
 });
 
 // Pageup
