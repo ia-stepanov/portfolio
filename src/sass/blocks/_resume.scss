@@ -13,12 +13,26 @@
   &__subtitle {
     text-align: center;
   }
+  &__nav {
+    display: none;
+    margin: 60px 0 24px;
+    text-align: center;
+    list-style-type: none;
+  }
+  &__elem {
+    display: inline;
+    margin: 0 16px;
+    font-size: 16px;
+    cursor: pointer;
+    &_active {
+      font-weight: bold;
+    }
+  }
   &__wrapper {
     padding: 60px 40px 0;
     display: grid;
     grid-template-columns: repeat(2, 425px);
     column-gap: 135px;
-    // justify-content: center;
     justify-content: space-evenly;
   }
   &__column {

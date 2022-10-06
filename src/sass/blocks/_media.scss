@@ -110,28 +110,46 @@
     }
   }
   .resume {
-    padding-top: 60px;
+    padding-top: 80px;
+    &__nav {
+      display: block;
+    }
     &__wrapper {
       grid-template-columns: 1fr;
       column-gap: 60px;
       row-gap: 40px;
+      justify-content: start;
     }
     &__column {
-      order: 2;
-      &:last-child {
-        order: 1;
+      display: none;
+      &_active {
+        display: block;
       }
     }
   }
   .skills {
-    padding-top: 60px;
+    padding-top: 80px;
+    &__nav {
+      display: block;
+    }
     &__items {
       grid-template-columns: 1fr;
       gap: 40px;
     }
+    &__item {
+      display: none;
+      &_active {
+        display: block;
+      }
+    }
   }
   .portfolio {
-    padding-top: 60px;
+    padding-top: 80px;
+    &__content {
+      &-link {
+        width: 280px;
+      }
+    }
   }
   .contacts {
     padding-top: 60px;
@@ -148,6 +166,13 @@
     }
     &__form {
       grid-template: 45px 190px 45px / repeat(2, 250px);
+    }
+    &__triggers {
+      column-gap: 40px;
+    }
+    &__btn {
+      width: 250px;
+      padding: 16px 25px;
     }
   }
 }
@@ -170,7 +195,11 @@
       font-size: 40px;
     }
     &__subtitle {
-      font-size: 24px;
+      font-size: 28px;
+    }
+    &__btns {
+      // margin: 64px auto 0;
+      margin: 96px auto 0;
     }
   }
 }
@@ -201,17 +230,25 @@
   }
   .resume {
     &__wrapper {
-      padding: 40px 24px 0;
+      padding: 0 24px;
+    }
+    &__nav {
+      margin: 32px 0 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
     }
   }
   .skills {
-    &__items {
-      padding: 0 24px;
+    &__nav {
+      margin: 32px 0 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
     }
-    &__item {
-      &-data:nth-child(-n + 2) {
-        display: none;
-      }
+    &__items {
+      margin-top: 32px;
+      padding: 0 24px;
     }
   }
   .portfolio {
@@ -219,18 +256,13 @@
       padding: 0 24px 120px;
     }
     &__nav {
-      margin: 32px 0;
+      margin: 32px 0 40px;
       display: flex;
       flex-direction: column;
       gap: 8px;
     }
     &__wrapper {
       margin-top: 32px;
-    }
-    &__content {
-      &-link {
-        width: 280px;
-      }
     }
   }
   .contacts {
@@ -256,9 +288,9 @@
     }
     &__btn {
       order: 2;
-      max-width: 220px;
+      width: 280px;
       margin: 0 auto;
-      line-height: 18px;
+      line-height: 24px;
     }
     &__policy {
       width: 208px;

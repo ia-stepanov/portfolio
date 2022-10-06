@@ -71,16 +71,3 @@ function generatePortfolio(portfolio) {
 }
 
 generatePortfolio(portfolio);
-
-// jQuery Tabs
-$('ul.portfolio__nav').on('click', 'li:not(.portfolio__item_active)', function () {
-  $(this)
-    .addClass('portfolio__item_active')
-    .siblings()
-    .removeClass('portfolio__item_active')
-    .closest('div.container')
-    .find('div.portfolio__wrapper')
-    .removeClass('portfolio__wrapper_active')
-    .eq($(this).index())
-    .addClass('portfolio__wrapper_active');
-});

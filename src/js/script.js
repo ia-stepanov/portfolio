@@ -10,9 +10,10 @@ import './modules/Privacy.js';
 
 // Plugins
 import './plugins/jquery.animateTyping.js';
-import './plugins/jquery.simpleLoadMore.min.js';
 import './plugins/jquery.anchorScroll.js';
+import './plugins/jquery.simpleLoadMore.min.js';
 import './plugins/jquery.showMore.js';
+import tabs from './plugins/jquery.tabs.js';
 
 // AnchorScroll
 var anchorScroll = $(document).AnchorScroll({
@@ -31,7 +32,6 @@ $('.portfolio__wrapper.all').simpleLoadMore({
 $(document).ready(function () {
   $('#test-last').showMore({
     // minheight: 1024,
-    minheight: 968,
     buttontxtmore: '&#8595;',
     buttontxtless: '&#8593;',
     animationspeed: 750,
@@ -51,3 +51,8 @@ $(window).scroll(function () {
     $('.pageup').fadeOut();
   }
 });
+
+// jQuery Tabs
+tabs('resume__nav', 'resume__elem_active', 'resume__column');
+tabs('skills__nav', 'skills__elem_active', 'skills__item');
+tabs('portfolio__nav', 'portfolio__item_active', 'portfolio__wrapper');

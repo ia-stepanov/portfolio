@@ -39,8 +39,12 @@
                         "class": settings.buttoncss,
                         click: function() {
 
+                            /* modification */
+                            var modHeight = $('.resume__column_active').height();
+                            var modFullheight = `${window.innerWidth >= 769 || window.innerWidth <= 576 ? modHeight : modHeight + 48}`;
+
                             if (element.css('max-height') != 'none') {
-                                element.css('height', settings.minheight).css('max-height', '').animate({height:fullheight}, settings.animationspeed, function () { showMoreButton.html(settings.buttontxtless); });
+                                element.css('height', settings.minheight).css('max-height', '').animate({height:/*fullheight*/ modFullheight}, settings.animationspeed, function () { showMoreButton.html(settings.buttontxtless); });
                             } else {
                                 element.animate({height:settings.minheight}, settings.animationspeed, function () { showMoreButton.html(settings.buttontxtmore); element.css('max-height', settings.minheight); });
                             }
