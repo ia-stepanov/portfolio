@@ -66,7 +66,7 @@
 - [Макет Portfolio](https://www.figma.com/file/3IliX6lF3vgJFsDmYm01x9/Portfolio-Layout)
 
 ## Источники вдохновения:
-- [Ивана Петриченко](https://www.udemy.com/user/yan-kovalenko-2/), учебный курс «[WEB-разработчик](https://www.udemy.com/course/webdeveloper/)»;
+- [Иван Петриченко](https://www.udemy.com/user/yan-kovalenko-2/), учебный курс «[WEB-разработчик](https://www.udemy.com/course/webdeveloper/)»;
 - [Ram Maheshwari](https://github.com/rammcodes), проект «[Dopefolio 🔥](https://github.com/rammcodes/Dopefolio)»;
 - [Bedimcode](https://github.com/bedimcode), проект «[Responsive Portfolio Clay Doe](https://github.com/bedimcode/responsive-portfolio-Clay-Doe)»;
 - [Bedimcode](https://github.com/bedimcode), проект «[Responsive Portfolio Website Jhon Doe](https://github.com/bedimcode/responsive-portfolio-website-JhonDoe)»;
