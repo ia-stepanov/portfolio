@@ -47,6 +47,9 @@
                                 element.css('height', settings.minheight).css('max-height', '').animate({height:/*fullheight*/ modFullheight}, settings.animationspeed, function () { showMoreButton.html(settings.buttontxtless); });
                             } else {
                                 element.animate({height:settings.minheight}, settings.animationspeed, function () { showMoreButton.html(settings.buttontxtmore); element.css('max-height', settings.minheight); });
+
+                                /* modification */
+                                $('html, body').animate({ scrollTop: $('#resume').offset().top }, settings.animationspeed);
                             }
                         },
                         html: settings.buttontxtmore

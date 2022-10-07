@@ -110,7 +110,7 @@
     }
   }
   .resume {
-    padding-top: 80px;
+    padding-top: 96px;
     &__nav {
       display: block;
     }
@@ -128,7 +128,7 @@
     }
   }
   .skills {
-    padding-top: 80px;
+    padding-top: 96px;
     &__nav {
       display: block;
     }
@@ -144,7 +144,7 @@
     }
   }
   .portfolio {
-    padding-top: 80px;
+    padding-top: 96px;
     &__content {
       &-link {
         width: 280px;
@@ -236,7 +236,7 @@
       margin: 32px 0 40px;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 12px;
     }
   }
   .skills {
@@ -244,7 +244,7 @@
       margin: 32px 0 40px;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 12px;
     }
     &__items {
       margin-top: 32px;
@@ -259,7 +259,7 @@
       margin: 32px 0 40px;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 12px;
     }
     &__wrapper {
       margin-top: 32px;
