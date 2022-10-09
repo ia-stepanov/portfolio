@@ -330,6 +330,11 @@
       text-align: start;
     }
   }
+  .footer {
+    &__wrapper {
+      padding: 0 24px;
+    }
+  }
   .modal {
     width: 90%;
     &__close {
