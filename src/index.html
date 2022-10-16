@@ -97,19 +97,33 @@
 
     <link rel="stylesheet" href="css/style.min.css" />
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KYY9MZVV7W"></script>
+    <!-- Google Tag Manager -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-
-      gtag('config', 'G-KYY9MZVV7W');
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-PP4X5KW');
     </script>
+    <!-- End Google Tag Manager -->
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PP4X5KW"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <header class="header">
       <div class="container">
         <div class="header__content">
@@ -135,10 +149,10 @@
                 <li class="menu__link"><a href="#skills" data-link>МОИ НАВЫКИ</a></li>
                 <li class="menu__link"><a href="#portfolio" data-link>МОИ РАБОТЫ</a></li>
                 <li class="menu__link">
-                  <a href="./document/my_cv.pdf" download>РЕЗЮМЕ</a>
+                  <a href="./document/my_cv.pdf" target="_blank">РЕЗЮМЕ</a>
                 </li>
                 <li class="menu__link">
-                  <a href="./document/my_presn.pdf" download>ПРЕЗЕНТАЦИЯ</a>
+                  <a href="./document/my_presn.pdf" target="_blank">ПРЕЗЕНТАЦИЯ</a>
                 </li>
                 <li class="menu__link"><a href="#contacts" data-link>КОНТАКТЫ</a></li>
               </ul>
@@ -217,7 +231,7 @@
         </li>
 
         <li class="promo__social-link">
-          <a href="./document/my_cv.pdf" download>
+          <a href="./document/my_cv.pdf" target="_blank">
             <img src="icons/social/cv.svg" alt="icon" title="Резюме" />
           </a>
         </li>
@@ -907,10 +921,10 @@
             <li class="footer__link"><a href="#skills" data-link>Навыки</a></li>
             <li class="footer__link"><a href="#portfolio" data-link>Портфолио</a></li>
             <li class="footer__link">
-              <a href="./document/my_cv.pdf" download>Резюме</a>
+              <a href="./document/my_cv.pdf" target="_blank">Резюме</a>
             </li>
             <li class="footer__link">
-              <a href="./document/my_presn.pdf" download>Презентация</a>
+              <a href="./document/my_presn.pdf" target="_blank">Презентация</a>
             </li>
             <li class="footer__link"><a href="#contacts" data-link>Контакты</a></li>
           </ul>
