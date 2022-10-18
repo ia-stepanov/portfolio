@@ -40,8 +40,7 @@
                         click: function() {
 
                             /* modification */
-                            var modHeight = $('.resume__column_active').height();
-                            var modFullheight = `${window.innerWidth >= 769 || window.innerWidth <= 576 ? modHeight : modHeight + 48}`;
+                            var modFullheight = $('.resume__column_active').height() + 48;
 
                             if (element.css('max-height') != 'none') {
                                 element.css('height', settings.minheight).css('max-height', '').animate({height:/*fullheight*/ modFullheight}, settings.animationspeed, function () { showMoreButton.html(settings.buttontxtless); });
